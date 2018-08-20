@@ -27,7 +27,7 @@ router.post('/', function (req, res) {
     const propertyToAdd = req.body; //data we are sending
     console.log('in POST route', propertyToAdd);
     const query = 'INSERT INTO "listings" ("cost", "sqft", "type", "city", "image_path") VALUES ($1, $2, $3, $4, $5);';
-    pool.query(query, [propertyToAdd.cost, propertyToAdd.sqft, propertyToAdd.type, propertyToAdd.city, propertyToAdd.imagepath]).then(() => {
+    pool.query(query, [propertyToAdd.cost, propertyToAdd.sqft, propertyToAdd.type, propertyToAdd.city, propertyToAdd.image_path]).then(() => {
         console.log('POST - added to db');
         res.sendStatus(201);
     }).catch((error) => {
