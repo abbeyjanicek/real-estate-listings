@@ -34,6 +34,18 @@ router.get('/', function (req, res) {
     });
 }) //end GET route
 
+router.delete('/:id', function (req, res) {
+    console.log('in DELETE route');
+    const idOfPropertyToDelete = req.params.id;
+    const query = 'DELETE FROM "listings" WHERE "id" = $1;';
+    pool.query(query, [idOfPropertyToDelete]).then ((results) => {
+        console.log('received DELETE req');
+        res.send(results.rows);
+        }).catch ((error) => {
+            console.log('error in DELETE', error);
+            res.sendStatus(500);
+        });
+})//end DELETE route
 
 
 

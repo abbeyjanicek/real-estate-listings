@@ -25,7 +25,7 @@ realEstateApp.controller('RentalsController', ['$http', function ($http) {
             url: '/rentals/' + property.id
         }).then(function (response) {
             console.log('RentalsController - deleteRental - response');
-            getProperty();
+            getRental();
         }).catch(function (error) {
             console.log('RentalsController - deleteRentals - error', error.statusText);
         });

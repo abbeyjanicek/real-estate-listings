@@ -1,4 +1,4 @@
-<div class="card">
+<!-- <div class="card">
     <img ng-src="/images/classic-flats.jpg" style="width:100%">
     <div class="container">
         <p>{{property.cost}}</p>
@@ -6,3 +6,19 @@
         <button ng-click="rc.deleteRental(property)">Delete Property</button>
     </div>
 </div>
+ -->
+
+<div>
+        <table>
+            <tbody>
+                <tr ng-repeat="property in rc.property.list">
+                    <td>{{property.cost}}</td>
+                    <td>{{property.sqft}}</td>
+                    <td>{{property.type}}</td>
+                    <td>{{property.city}}</td>
+                    <td><img ng-src="images/{{property.image_path}}"></td>
+                    <td><button ng-click="rc.deleteRental(property)">Delete Property</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
