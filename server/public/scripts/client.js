@@ -1,2 +1,2 @@
-let realEstateApp = angular.module('RealEstateApp', []);
+let realEstateApp = angular.module('realEstateApp', ['ng']);
 

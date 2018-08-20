@@ -1,14 +1,13 @@
 <h1>You Are Home</h1>
-
 <div>
-        <form ng-submit="hc.addProperty(hc.propertyToAdd)">
-            Name: <input type="text" ng-model="hc.propertyToAdd.name">
-            Price: <input type="text" ng-model="hc.propertyToAdd.price">
-            Type: <select id="typeOfProperty" ng-model="hc.propertyToAdd.type">
-                <option value="">---please select---</option> <!--not selected/blank option-->
-                <option value="true">For Sale</option>
-                <option value="false">Rental</option>
-            </select>
-            <button>Add Property</button>
-        </form>
-        </div>
+    <form ng-submit="hc.addProperty(hc.propertyToAdd)">
+        Name:
+        <input type="text" ng-model="hc.propertyToAdd.cost"> Cost:
+        <input type="text" ng-model="hc.propertyToAdd.sqft"> Square Footage:
+        <input type="text" ng-model="hc.propertyToAdd.type"> Type:
+        <input type="text" ng-model="hc.propertyToAdd.city"> City:
+        <input type="text" ng-model="hc.propertyToAdd.imagepath"> Image:        
+        </select>
+        <button>Add Property</button>
+    </form>
+</div>
