@@ -1,13 +1,26 @@
 <h2>Add New Property:</h2>
 
-        <div>
-            <form ng-submit="hc.addProperty(hc.propertyToAdd)">
-                Cost:
-                <input type="text" ng-model="hc.propertyToAdd.cost" placeholder="enter cost here"> Square Footage:
-                <input type="text" ng-model="hc.propertyToAdd.sqft" placeholder="enter size of property here"> Type:
-                <input type="text" ng-model="hc.propertyToAdd.type" placeholder="enter type of property here"> City:
-                <input type="text" ng-model="hc.propertyToAdd.city" placeholder="enter location of property here"> Image:
-                <input type="text" ng-model="hc.propertyToAdd.image_path" placeholder="enter url path for property image here">
-                <button>Add Property</button>
-            </form>
-        </div>
+<div>
+    <form ng-submit="hc.addProperty(hc.propertyToAdd)">
+        Cost:
+        <input type="text" ng-model="hc.propertyToAdd.cost" placeholder="enter cost here"> Square Footage:
+        <input type="text" ng-model="hc.propertyToAdd.sqft" placeholder="enter size of property here"> Type:
+        <input type="text" ng-model="hc.propertyToAdd.type" placeholder="enter type of property here"> City:
+        <input type="text" ng-model="hc.propertyToAdd.city" placeholder="enter location of property here"> Image:
+        <input type="text" ng-model="hc.propertyToAdd.image_path" placeholder="enter url path for property image here">
+        <button>Add Property</button>
+    </form>
+</div>
+<!-- <div>
+    <table>
+        <tbody>
+            <tr ng-repeat="property in hc.property.list">
+                <td>{{property.cost}}</td>
+                <td>{{property.sqft}}</td>
+                <td>{{property.type}}</td>
+                <td>{{property.city}}</td>
+                <td>{{property.image_path}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->

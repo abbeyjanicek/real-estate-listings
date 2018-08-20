@@ -1,8 +1,8 @@
 <div class="card">
-    <img ng-source="classic-flats.jpg" alt="classic-flats" style="width:100%">
+    <img ng-src="/images/classic-flats.jpg" style="width:100%">
     <div class="container">
-        <p>{{listings.cost}}</p>
-        <p>{{listings.sqft}}</p>
-        <button ng-click="rc.deleteProperty">Delete Property</button>
+        <p>{{property.cost}}</p>
+        <p>{{property.sqft}}</p>
+        <button ng-click="rc.deleteRental(property)">Delete Property</button>
     </div>
 </div>
