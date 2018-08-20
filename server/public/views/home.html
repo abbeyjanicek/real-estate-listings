@@ -1,13 +1,13 @@
-<h1>You Are Home</h1>
-<div>
-    <form ng-submit="hc.addProperty(hc.propertyToAdd)">
-        Name:
-        <input type="text" ng-model="hc.propertyToAdd.cost"> Cost:
-        <input type="text" ng-model="hc.propertyToAdd.sqft"> Square Footage:
-        <input type="text" ng-model="hc.propertyToAdd.type"> Type:
-        <input type="text" ng-model="hc.propertyToAdd.city"> City:
-        <input type="text" ng-model="hc.propertyToAdd.imagepath"> Image:        
-        </select>
-        <button>Add Property</button>
-    </form>
-</div>
+<h2>Add New Property:</h2>
+
+        <div>
+            <form ng-submit="hc.addProperty(hc.propertyToAdd)">
+                Cost:
+                <input type="text" ng-model="hc.propertyToAdd.cost" placeholder="enter cost here"> Square Footage:
+                <input type="text" ng-model="hc.propertyToAdd.sqft" placeholder="enter size of property here"> Type:
+                <input type="text" ng-model="hc.propertyToAdd.type" placeholder="enter type of property here"> City:
+                <input type="text" ng-model="hc.propertyToAdd.city" placeholder="enter location of property here"> Image:
+                <input type="text" ng-model="hc.propertyToAdd.image_path" placeholder="enter url path for property image here">
+                <button>Add Property</button>
+            </form>
+        </div>
