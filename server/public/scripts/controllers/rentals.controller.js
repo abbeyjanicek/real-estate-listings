@@ -29,5 +29,5 @@ realEstateApp.controller('RentalsController', ['$http', function ($http) {
         }).catch(function (error) {
             console.log('RentalsController - deleteRentals - error', error.statusText);
         });
-    }
+    }//end deleteRental
 }]); //end RentalsController

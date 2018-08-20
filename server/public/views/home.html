@@ -19,6 +19,7 @@
                 <td>{{property.type}}</td>
                 <td>{{property.city}}</td>
                 <td><img ng-src="images/{{property.image_path}}"></td>
+                <td><button ng-click="hc.deleteProperty(property)">Delete Property</button></td>
             </tr>
         </tbody>
     </table>

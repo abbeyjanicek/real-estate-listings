@@ -2,8 +2,8 @@ realEstateApp.controller('HomeController', ['$http', function($http) {
     console.log('HomeController GO!');
     
     const self = this;
-    self.property = { list: [{ cost: '3000', sqft: '100', type: 'rental', city: 'Minneapolis', image_path: 'rental2.jpeg' }]};
-    self.propertyToAdd = { cost: '', sqft: '', type: '', city: '', image_path: ''};    
+    self.property = { list: [{ cost: '3000', sqft: '100', type: 'rental', city: 'Minneapolis', image_path: 'rental2.jpg' }]};
+    //self.propertyToAdd = { cost: '', sqft: '', type: '', city: '', image_path: ''};    
 
 
     self.addProperty = function(property) {
@@ -19,7 +19,7 @@ realEstateApp.controller('HomeController', ['$http', function($http) {
         }).catch(function (error) {
             console.log('HomeController - addProperty - error: ', error.statusText);
         });
-    }
+    }//end addProperty
 
     function getProperty() {
         console.log('in getProperty');
@@ -32,9 +32,20 @@ realEstateApp.controller('HomeController', ['$http', function($http) {
         }).catch(function (error) {
             console.log('HomeController - getProperty error', error.statusText);
         })
-        }
+        }//end getProperty
 
     getProperty();
 
+    self.deleteProperty = function (property) {
+        $http({
+            method: 'DELETE',
+            url: '/home/' + property.id
+        }).then(function (response) {
+            console.log('HomeController - deleteProperty - response');
+            getProperty();
+        }).catch(function (error) {
+            console.log('HomeController - deleteProperty - error', error.statusText);
+        });
+    }//end deleteProperty
 
 }]); //end HomeController
