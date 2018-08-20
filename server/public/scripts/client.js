@@ -1,8 +1,9 @@
 let realEstateApp = angular.module('realEstateApp', ['ngRoute']);
 
 realEstateApp.config(function ($routeProvider) {
-    $routeProvider.when('/', {
-        controller: 'HomeController as hc',
+    $routeProvider.when('/home', {
+        templateUrl: 'views/home.html',
+        controller: 'HomeController as hc'
     }).when('/rentals', {
         templateUrl: 'views/rentals.html',
         controller: 'RentalsController as rc'

@@ -2,7 +2,7 @@ realEstateApp.controller('HomeController', ['$http', function($http) {
     console.log('HomeController GO!');
     
     const self = this;
-    self.property = { list: [{ cost: '3000', sqft: '100', type: 'rental', city: 'Minneapoli', image_path: 'rental2.jpeg' }]};
+    self.property = { list: [{ cost: '3000', sqft: '100', type: 'rental', city: 'Minneapolis', image_path: 'rental2.jpeg' }]};
     self.propertyToAdd = { cost: '', sqft: '', type: '', city: '', image_path: ''};    
 
 
