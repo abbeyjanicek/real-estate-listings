@@ -1,10 +1,13 @@
 realEstateApp.conroller('HomeController', ['$http', function($http) {
+    console.log('HomeController GO!');
+    
     const self = this;
     self.property = { list: [{name: 'test property', price: '500,000', type: 'for sale'}] };
     self.propertyToAdd = { name: '', price: '', type: ''};
     getProperty();
 
     self.addProperty = function(property) {
+        console.log('in addProperty');
         $http({
             method: 'POST',
             url: '/home',

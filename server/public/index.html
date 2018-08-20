@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Real Estate Listings</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
+    <!-- sourcing in angular, angular routes, and client.js -->
     <script src="vendors/Angular-JS/angular.min.js"></script>
     <script src="scripts/client.js"></script>
+    <!-- sourcing in controllers for each view -->
     <script src="scripts/controllers/home.controller.js"></script>
     <script src="scripts/controllers/rentals.controller.js"></script>
     <script src="scripts/controllers/sale.controller.js"></script>
 
 </head>
+<!-- bring in myApp -->
+
 <body ng-app="RealEstateApp">
     <h1>Homes for Sale or Rent</h1>
     is angularJS working? {{2 === 2}}
-
-    <nav></nav>
-    
+    <!-- bring in controllers -->
+    <div ng-controller="HomeController as hc" 
+         ng-controller="RentalController as rc" 
+         ng-controller="SaleController as sc">
+        <!-- navigation links -->
+        <nav>
+            <a href="/">Home</a>
+            <a href="#!/rentals">Rentals</a>
+            <a href="#!/sale">For Sale</a>
+        </nav>
+        
+    </div>
 </body>
+
 </html>
