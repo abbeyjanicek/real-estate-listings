@@ -1,4 +1,4 @@
-realEstateApp.conroller('HomeController', ['$http', function($http) {
+realEstateApp.controller('HomeController', ['$http', function($http) {
     console.log('HomeController GO!');
     
     const self = this;
