@@ -11,7 +11,8 @@
 </form>
 
 <div>
-    <table>
+        
+    <!-- <table>
         <tbody>
             <tr ng-repeat="property in hc.property.list">
                 <td>{{property.cost}}</td>
@@ -22,5 +23,18 @@
                 <td><button ng-click="hc.deleteProperty(property)">Delete Property</button></td>
             </tr>
         </tbody>
-    </table>
+    </table> -->
+
+    <div class="card" style="width:400px" ng-repeat="property in hc.property.list">
+            <img class="card-img-top" ng-src="images/{{property.image_path}}" alt="Card image">
+            <div class="card-body">
+                <h4 class="card-title">{{property.cost}}</h4>
+                <p class="card-text">
+                        <p>Square Footage: {{property.sqft}}</p>
+                        <p>Type: {{property.type}}</p>
+                        <p>Location: {{property.city}}.</p>
+                    </p>
+                <button class="btn btn-primary" button ng-click="hc.deleteProperty(property)">Delete Property</button>
+            </div>
+    
 </div>

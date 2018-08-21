@@ -10,7 +10,7 @@
 
 <div>
     <h2>Properties For Rent</h2>
-        <table>
+    <!-- <table>
             <tbody>
                 <tr ng-repeat="property in rc.property.list">
                     <td>{{property.cost}}</td>
@@ -21,5 +21,19 @@
                     <td><button ng-click="rc.deleteRental(property)">Delete Property</button></td>
                 </tr>
             </tbody>
-        </table>
+        </table> -->
+
+
+    <div class="card" style="width:400px" ng-repeat="property in rc.property.list">
+        <img class="card-img-top" ng-src="images/{{property.image_path}}" alt="Card image">
+        <div class="card-body">
+            <h4 class="card-title">{{property.cost}}</h4>
+            <p class="card-text">
+                    {{property.sqft}}
+                    {{property.type}}
+                    {{property.city}}.</p>
+            <button class="btn btn-primary" button ng-click="rc.deleteRental(property)">Delete Property</button>
+        </div>
     </div>
+</div>
+
