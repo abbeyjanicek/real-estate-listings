@@ -1,7 +1,18 @@
-
 <div>
-        <h2>Properties For Sale</h2>
-        <!-- <table>
+    <h2>Properties For Sale</h2>
+    <div class="card" style="width:400px" ng-repeat="property in sc.property.list">
+        <img class="card-img-top" ng-src="images/{{property.image_path}}" alt="Card image">
+        <div class="card-body">
+            <h4 class="card-title">{{property.cost}}</h4>
+            <p class="card-text">
+                {{property.sqft}} {{property.type}} {{property.city}}.
+            </p>
+            <button class="button" ng-click="sc.deleteSaleProperty(property)">Delete Property</button>
+        </div>
+    </div>
+
+    <!--Table formatting from before Bootstrap cards.-->
+     <!-- <table>
             <tbody>
                 <tr ng-repeat="property in sc.property.list">
                     <td>{{property.cost}}</td>
@@ -13,17 +24,3 @@
                 </tr>
             </tbody>
         </table> -->
-
-        <div class="card" style="width:400px" ng-repeat="property in sc.property.list">
-                <img class="card-img-top" ng-src="images/{{property.image_path}}" alt="Card image">
-                <div class="card-body">
-                    <h4 class="card-title">{{property.cost}}</h4>
-                    <p class="card-text">
-                            {{property.sqft}}
-                            {{property.type}}
-                            {{property.city}}.</p>
-                    <button class="btn btn-primary" ng-click="sc.deleteSaleProperty(property)">Delete Property</button>
-                </div>
-
-    </div>
-

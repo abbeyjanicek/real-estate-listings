@@ -1,18 +1,32 @@
 <h2>Add New Property:</h2>
 
 <form ng-submit="hc.addProperty(hc.propertyToAdd)">
-    Cost:
-    <input type="text" ng-model="hc.propertyToAdd.cost" placeholder="enter cost here"> Square Footage:
-    <input type="text" ng-model="hc.propertyToAdd.sqft" placeholder="enter size of property here"> Type:
-    <input type="text" ng-model="hc.propertyToAdd.type" placeholder="enter type of property here"> City:
-    <input type="text" ng-model="hc.propertyToAdd.city" placeholder="enter location of property here"> Image:
-    <input type="text" ng-model="hc.propertyToAdd.image_path" placeholder="enter url path for property image here">
-    <button>Add Property</button>
+    <p>Cost:
+    <input class="inputfield" type="text" ng-model="hc.propertyToAdd.cost" placeholder="enter cost here"> Square Footage:
+    <input class="inputfield" type="text" ng-model="hc.propertyToAdd.sqft" placeholder="enter size of property here"> Type:
+    <input class="inputfield" type="text" ng-model="hc.propertyToAdd.type" placeholder="enter type of property here"></p> 
+    <p>City:
+    <input class="inputfield" type="text" ng-model="hc.propertyToAdd.city" placeholder="enter location of property here"> Image:
+    <input class="inputfield" type="text" ng-model="hc.propertyToAdd.image_path" placeholder="enter url path for property image here"></p>
+    <button class="button">Add Property</button>
 </form>
 
 <div>
-        
-    <!-- <table>
+    <div class="card" style="width:400px" ng-repeat="property in hc.property.list">
+        <img class="card-img-top" ng-src="images/{{property.image_path}}" alt="Card image">
+        <div class="card-body">
+            <h4 class="card-title">{{property.cost}}</h4>
+            <p class="card-text">
+                <p>Square Footage: {{property.sqft}}</p>
+                <p>Type: {{property.type}}</p>
+                <p>Location: {{property.city}}.</p>
+            </p>
+            <button class="button" ng-click="hc.deleteProperty(property)">Delete Property</button>
+        </div>
+    </div>
+
+<!--Table formatting before Bootstrap cards.-->
+      <!-- <table>
         <tbody>
             <tr ng-repeat="property in hc.property.list">
                 <td>{{property.cost}}</td>
@@ -24,17 +38,3 @@
             </tr>
         </tbody>
     </table> -->
-
-    <div class="card" style="width:400px" ng-repeat="property in hc.property.list">
-            <img class="card-img-top" ng-src="images/{{property.image_path}}" alt="Card image">
-            <div class="card-body">
-                <h4 class="card-title">{{property.cost}}</h4>
-                <p class="card-text">
-                        <p>Square Footage: {{property.sqft}}</p>
-                        <p>Type: {{property.type}}</p>
-                        <p>Location: {{property.city}}.</p>
-                    </p>
-                <button class="btn btn-primary" button ng-click="hc.deleteProperty(property)">Delete Property</button>
-            </div>
-    
-</div>

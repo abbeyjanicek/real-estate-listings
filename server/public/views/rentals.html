@@ -1,16 +1,20 @@
-<!-- <div class="card">
-    <img ng-src="/images/classic-flats.jpg" style="width:100%">
-    <div class="container">
-        <p>{{property.cost}}</p>
-        <p>{{property.sqft}}</p>
-        <button ng-click="rc.deleteRental(property)">Delete Property</button>
-    </div>
-</div>
- -->
-
 <div>
     <h2>Properties For Rent</h2>
-    <!-- <table>
+       <div class="card" style="width:400px" ng-repeat="property in rc.property.list">
+        <img class="card-img-top" ng-src="images/{{property.image_path}}" alt="Card image">
+        <div class="card-body">
+            <h4 class="card-title">{{property.cost}}</h4>
+            <p class="card-text">
+                    {{property.sqft}}
+                    {{property.type}}
+                    {{property.city}}.</p>
+            <button class="button" button ng-click="rc.deleteRental(property)">Delete Property</button>
+        </div>
+    </div>
+</div>
+
+<!--Table formatting before bootstrap cards.-->
+ <!-- <table>
             <tbody>
                 <tr ng-repeat="property in rc.property.list">
                     <td>{{property.cost}}</td>
@@ -22,18 +26,4 @@
                 </tr>
             </tbody>
         </table> -->
-
-
-    <div class="card" style="width:400px" ng-repeat="property in rc.property.list">
-        <img class="card-img-top" ng-src="images/{{property.image_path}}" alt="Card image">
-        <div class="card-body">
-            <h4 class="card-title">{{property.cost}}</h4>
-            <p class="card-text">
-                    {{property.sqft}}
-                    {{property.type}}
-                    {{property.city}}.</p>
-            <button class="btn btn-primary" button ng-click="rc.deleteRental(property)">Delete Property</button>
-        </div>
-    </div>
-</div>
 
